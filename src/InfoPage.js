@@ -1,21 +1,16 @@
 import React from "react";
-// import monkeyImage from './monkey.jpg';
 import whiteRect from "./images/white-react.png";
 import blueCard from "./images/blue_card.png";
 import pinkCard from "./images/rotate-pink.png";
 import comboCards from "./images/combo-cards.png";
 
-const InfoPage = ({ username, onLogout }) => {
+const InfoPage = ({ username, onLogout, setCurrentPage }) => {
   const handleNext = () => {
-    window.location.href = "/game";
+    setCurrentPage('/game');
   };
 
   return (
     <div className="page-container">
-      {/* <h2>Instructions:</h2>
-      <p>Match the fruit images with their corresponding initial letter images.</p> */}
-      {/* <img src={monkeyImage} alt="Monkey" className="monkey-image" /> */}
-
       <div className="infoCard-conatainer">
         <img src={whiteRect} alt="white-cont" />
         <div className="first-cont">

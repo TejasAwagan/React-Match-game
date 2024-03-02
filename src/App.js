@@ -2,39 +2,39 @@ import React, { useState, useEffect } from 'react';
 import StartPage from './StartPage';
 import InfoPage from './InfoPage';
 import GamePage from './GamePage';
-import '../src/index.css'; // Import CSS for styling
+import '../src/index.css'; 
 import LoginPage from './LoginPage';
-import Background from './images/bg.png';
+// import Background from './images/bg.png';
 
 const App = () => {
   const [username, setUsername] = useState(localStorage.getItem('username'));
-
+  const [currentPage, setCurrentPage] = useState('/')
   const handleLogin = (username) => {
     localStorage.setItem('username', username);
     setUsername(username);
-    window.location.href = '/start';
+    setCurrentPage('/start');
   };
 
   const handleLogout = () => {
     localStorage.removeItem('username');
     setUsername(null);
-    window.location.href = '/';
+    setCurrentPage('/');
   };
 
   useEffect(() => {
-    if (username === null && window.location.pathname !== '/') {
-      window.location.href = '/';
-    }
+    if (username === null && currentPage !== '/') {
+      setCurrentPage('/');
+    }else{}
   }, [username]);
 
   const renderPage = () => {
-    switch (window.location.pathname) {
+    switch (currentPage) {
       case '/':
         return <LoginPage onLogin={handleLogin} />;
       case '/start':
-        return <StartPage username={username} onLogout={handleLogout} />;
+        return <StartPage username={username} onLogout={handleLogout} setCurrentPage={setCurrentPage}/>;
       case '/info':
-        return <InfoPage username={username} onLogout={handleLogout} />;
+        return <InfoPage username={username} onLogout={handleLogout} setCurrentPage={setCurrentPage}/>;
       case '/game':
         return <GamePage username={username} onLogout={handleLogout} />;
       default:

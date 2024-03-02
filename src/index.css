@@ -1,5 +1,5 @@
 
-/* Reset */
+
 body, h1, h2, p, ul, li, button {
   margin: 0;
   padding: 0;
@@ -199,7 +199,7 @@ h1{
   color: black;
   z-index: 1;
 }
-/* Add these styles to your existing stylesheet or create a new one */
+
 
 .page-container {
   display: flex;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Background from "./images/bg.png";
+// import Background from "./images/bg.png";
 import monkey from "./images/monkey.png";
 
 const LoginPage = ({ onLogin }) => {
