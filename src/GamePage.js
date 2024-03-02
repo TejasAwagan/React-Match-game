@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import PinkCard from "./images/pink_card.png"; 
-import BlueCard from "./images/blue_card.png"; 
+import PinkCard from "./images/pink_card.png";
+import BlueCard from "./images/blue_card.png";
 
 const GamePage = ({ username, onLogout }) => {
   const fruits = ["Apple", "Banana", "Cherry", "Grape", "Lemon", "Orange"];
@@ -44,7 +44,6 @@ const GamePage = ({ username, onLogout }) => {
     );
     setCards(updatedCards);
     setFlippedCards([...flippedCards, id]);
-    
 
     if (flippedCards.length === 1) {
       const firstCard = cards.find((card) => card.id === flippedCards[0]);
@@ -60,7 +59,6 @@ const GamePage = ({ username, onLogout }) => {
               : card
           );
           setCards(unmatchedCards);
-          // setMatchCount(matchCount - 1);
           setFlippedCards([]);
         }, 1000);
       }
@@ -78,8 +76,6 @@ const GamePage = ({ username, onLogout }) => {
         )}
       </div>
 
-      {/* <h2>Matching Game</h2>
-      <h1>{username}!</h1> */}
       <button onClick={onLogout} className="btn">
         Logout
       </button>
@@ -105,21 +101,10 @@ const GamePage = ({ username, onLogout }) => {
         ))}
       </div>
 
-            <div className="winner-container">
-            {userWins && <div className="message"> Hurray ! {username} Wins!</div>}
-            </div>
-        
-          
-
-  
-
-        
-      
-          </div>
-    // ))}
-
-    //   </div>
-    // </div>
+      <div className="winner-container">
+        {userWins && <div className="message"> Hurray ! {username} Wins!</div>}
+      </div>
+    </div>
   );
 };
 
