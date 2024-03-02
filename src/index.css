@@ -302,15 +302,39 @@ h1{
 .first-cont img{
   position: absolute;
   top: 18%;
-  left: 12%;
-  /* z-index: 10003; */
+  left: 16%;
 }
 
-.first-cont .blue-card{
-  
-  transform: rotateX(-0.25turn);
+
+.first-cont .text{
+  position: absolute;
+  top:50%;
+  left: 16%;
+  font-size: 1.3rem;
 }
 
-h3{
-  position: relative;
+.second-cont img{
+  position: absolute;
+  top: 17%;
+  left: 42%;
+}
+
+.second-cont .text2{
+  position: absolute;
+  top:50%;
+  left: 43%;
+  font-size: 1.3rem;
+}
+
+.third-cont img{
+  position: absolute;
+  top :15%;
+  left: 65%;
+}
+.third-cont .text3{
+  position:absolute;
+  top: 50%;
+  left: 70%;
+  font-size: 1.3rem;
+  text-align: center;
 }
