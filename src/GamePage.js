@@ -35,6 +35,9 @@ const GamePage = ({ username, onLogout }) => {
   };
 
   const handleCardClick = (id) => {
+    if(id === flippedCards[0]){
+      return
+    }
     const clickedCard = cards.find((card) => card.id === id);
     if (!clickedCard || flippedCards.length === 2 || matchedCards.includes(id))
       return;
@@ -93,7 +96,7 @@ const GamePage = ({ username, onLogout }) => {
                 <img src={PinkCard} alt={card?.type} className="fruit-image" />
               </div>
               <div className="card-back">
-                <img src={PinkCard} alt={card?.type} className="fruit-image" />
+                <img src={BlueCard} alt={card?.type} className="fruit-image" />
                 <div className="fruit-name">{card?.type}</div>
               </div>
             </div>

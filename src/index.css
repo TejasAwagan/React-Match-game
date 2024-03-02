@@ -8,7 +8,7 @@ body, h1, h2, p, ul, li, button {
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 /* Body styles */
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', sans-serif !important;
   background-image: url('./images//bg.png');
   background-size: cover;
   background-position: center;
@@ -16,6 +16,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 /* Page container styles */
@@ -45,6 +48,7 @@ h1, h2 {
   color: #fff;
   text-decoration: none;
   transition: background-color 0.3s;
+  font-family: 'Nunito', sans-serif !important;
 }
 
 .btn:hover {

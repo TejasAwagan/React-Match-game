@@ -23,7 +23,7 @@ const InfoPage = ({ username, onLogout }) => {
           <img className="pink-card" src={pinkCard} alt="pink-card" />
           <div className="text">
             <h3>Select a Pink Card</h3>
-            <span>It has a Images</span>
+            
           </div>
         </div>
 
@@ -31,7 +31,7 @@ const InfoPage = ({ username, onLogout }) => {
         <div className="second-cont">
           <img className="blue-card" src={blueCard} alt="blue-card" />
           <div className="text2">
-            <h3>Select a Blue Card</h3>
+            <h3>Select a Second Card</h3>
           </div>
         </div>
 
